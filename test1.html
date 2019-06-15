@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<title>Median Calculater</title>
+</head>
+<body>
+	<h1>Median Calculator</h1>
+	<script type="text/javascript">
+		function median(num1, num2, num3){
+			var median = 0;
+			if(num1>=num2 && num1<=num3 || num1<=num2 && num1>=num3 ){
+				median = num1;
+			}
+			if(num2>=num1 && num2<=num3 || num2<=num1 && num2>=num3){
+				median = num2;
+			}
+			if(num3>=num1 && num3<=num2 || num3<=num1 && num3>=num2){
+				median = num3;
+			}
+			return median;
+		}
+		var num1 = window.prompt("Please enter first number for median calculater.", "0" );
+		var num2 = window.prompt("Please enter second number for median calculater.", "0" );
+		var num3 = window.prompt("Please enter third number for median calculater.", "0" );
+		var body_html = '<h1> Median is :' + median(parseInt(num1),parseInt(num2),parseInt(num3)) + '</h1>';
+		var body_tag = document.getElementsByTagName('body');
+		body_tag[0].innerHTML = body_html;
+	</script>
+</body>
+</html>
